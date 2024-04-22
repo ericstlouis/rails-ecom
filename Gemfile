@@ -80,3 +80,6 @@ gem "chartkick"
 gem "stripe", "~> 11.2"
 
 gem "pagy", "~> 8.2"
+
+gem 'aws-sdk-rails', '~> 3'
+gem 'aws-sdk-s3', '~> 1'
