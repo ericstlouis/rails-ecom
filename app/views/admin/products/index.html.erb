@@ -8,6 +8,16 @@
     <%= link_to "New product", new_admin_product_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
+  <div class="flex mt-4 flex-col md:flex-row items-start md:items-center justify-betwee w-full">
+    <%= form_with url: admin_products_path, method: :get, class: "flex" do |form| %>
+      <%= form.text_field :query, placeholder: "Search", class: "rounded border-gray-500 text-gray-800" %>
+      <%= form.submit "Submit", class: "cursor-pointer bg-gray-500 ml-2 hover:bg-gray-600 text-white py-2 px-4 rounded" %>
+    <% end %>
+    <%= form_with url: admin_products_path, method: :get, class: 'flex' do |form| %>
+      <%= form.submit "Clear", class: "cursor-pointer bg-gray-500 ml-0 md:ml-2 mt-2 md:mt-0 hover:bg-gray-600 text-white py-2 px-4 rounded" %>
+    <% end %>
+  </div>
+
     <div class="flex flex-col w-full">
     <div class="overlow-x-auto sm:mx-0.5 lg:mx-0.5">
       <div class="py-2 inline-block min-w-full">
@@ -59,6 +69,7 @@
               <% end %>
             </tbody>
           </table>
+          <%== pagy_nav(@pagy) if @pagy.pages > 1 %>
         </div>
       </div>
     </div>

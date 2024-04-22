@@ -23,5 +23,16 @@ Rails.application.routes.draw do
     root to: "admin#index", as: :admin_root
   end
 
+  resources :categories, only:  [:show]
+  resources :products, only: [:show]
+  # resources :orders, only: [:show]
+
   get "admin" => "admin#index"
+  get "category" => "category#index"
+  get "cart" => "cart#show"
+  post "checkout" => "checkout#create"
+  get "success" => "checkout#success"
+  get "cancel" => "checkout#cancel"
+  post "webhooks" => "webhooks#stripe"
+
 end

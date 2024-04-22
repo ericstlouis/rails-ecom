@@ -12,8 +12,10 @@
   </head>
 
   <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+    <%= render "shared/navbar"%>
+    <main class="w-full mt-28 px-5">
       <%= yield %>
     </main>
+    <%= render "shared/footer"%>
   </body>
 </html>
