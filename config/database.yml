@@ -79,6 +79,7 @@ test:
 #
 production:
   <<: *default
-  database: ecom_production
+  database: mysite
   username: ecom
   password: <%= ENV["ECOM_DATABASE_PASSWORD"] %>
+
