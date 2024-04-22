@@ -1,5 +1,5 @@
 databases:
-  - name: Ecom
+  - name: mysite
     databaseName: mysite
     user: mysite
     plan: free
