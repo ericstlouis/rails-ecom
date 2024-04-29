@@ -41,4 +41,3 @@
    bin/dev
 
 NOTES:
-The frontend will typically run on http://localhost:3001. Check your Next.js project's settings for the correct port. The Rails API will usually be running http://localhost:3000
