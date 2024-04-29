@@ -9,7 +9,7 @@
 
 * **Admin Dashbaord:** Admin product managament system with chart graph.
 * **Auth:** User Authentication.
-* **User Checkout w/Stripe:** Stripe checkout is disabled in production for obvious reason.
+* **User Checkout w/Stripe:** Uses Stripe webhooks to intereact with backend
 * **User storefront**
 
 
@@ -40,4 +40,5 @@
    ```bash
    bin/dev
 
-NOTES:
+NOTES: 
+Stripe checkout is disabled in production for obvious reason.
